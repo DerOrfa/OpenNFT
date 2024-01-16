@@ -154,7 +154,6 @@ class InstallCommand(install, InstallMatlabEngineMixin, InstallGitSubmodulesMixi
         self._finalize()
 
     def run(self):
-        self._install_matlab_engine()
         self._install_git_submodules()
         install.run(self)
 
@@ -171,7 +170,6 @@ class DevelopCommand(develop, InstallMatlabEngineMixin, InstallGitSubmodulesMixi
         self._finalize()
 
     def run(self):
-        self._install_matlab_engine()
         self._install_git_submodules()
         develop.run(self)
 
